@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler'
+
+import  React from 'react';
+import { Button, View } from 'react-native';
+
+import SidebarNavigator from './navigator/SideBarNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import HomeScreen from './Screens/HomeScreen';
+
+
+
+
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <NavigationContainer>
+      <SidebarNavigator/>
+      
+    </NavigationContainer>
+    // <View>
+    //   <HomeScreen/>
+    // </View>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    
+  );}
